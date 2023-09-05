@@ -44,12 +44,16 @@ namespace VarsAndExpressions
 
 
             //convert string vars to ints so they can be used in a caluclation
-
+            try { 
             var1 = Convert.ToInt32(sVar1);
             var2 = Convert.ToInt32(sVar2);
             var3 = Convert.ToInt32(sVar3);
             var4 = Convert.ToInt32(sVar4);
+            }
+            catch {
 
+                Console.WriteLine("Please enter numbers!");
+            }
 
             //perform the calculations and store it in the product variable
             product = (var1 * var2 * var3 * var4);
