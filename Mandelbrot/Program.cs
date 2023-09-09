@@ -41,7 +41,7 @@ namespace Mandelbrot
             Console.WriteLine("Please enter a end value for realCoord i.e 1.77");
             eRealCoord = Console.ReadLine();
 
-            //try catch to make sure the user is entering the correct thing
+            //try catch to make sure the user is entering the correct thing (not a string)
             try
             {
                 //convert the strings to doubles
