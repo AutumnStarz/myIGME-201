@@ -26,6 +26,7 @@ namespace MaV7
             //reverse it
             Array.Reverse(reverseArray);
             Console.WriteLine(reverseArray);
+
         }
     }
 }
