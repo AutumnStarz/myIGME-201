@@ -19,6 +19,7 @@ static class Program
     // Restrictions: If the username = "David" and he chose "easy", override with "hard"
     static void Main()
     {
+        //create a new timer
         timeOutTimer = new Timer(5);
         // store user name
         string myName = "";
