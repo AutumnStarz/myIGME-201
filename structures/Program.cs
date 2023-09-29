@@ -21,6 +21,14 @@ namespace structures
 
             object myObject;
             myObject = aInt; //can point at any data type, but is a refrence data type
+            byte byteVal;
+            short shortVal = -556;
+            byteVal = Convert.ToByte(shortVal);
+            Console.WriteLine("byteVal = {0}", byteVal);
+
+
+
+
 
         }
 
