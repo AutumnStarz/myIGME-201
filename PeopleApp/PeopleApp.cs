@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PeopleLib;
+using CourseLib;
+using System.Runtime.CompilerServices;
 
 namespace PeopleApp
 {
@@ -11,6 +13,7 @@ namespace PeopleApp
     {
         static void Main(string[] args)
         {
+            Courses courses = new Courses();
             // create our People SortedList!
             People people = new People();
 
@@ -47,7 +50,7 @@ namespace PeopleApp
                         }
 
                         // edit the new person
-                        EditPerson(ref person);
+                        EditPerson(ref person, courses);
 
                         // add the new person to the SortedList array using the email as index
                         // note that this uses the index property in the class which does additional exception handling
@@ -82,7 +85,7 @@ namespace PeopleApp
                             people.Remove(email);
 
                             // edit the selected person
-                            EditPerson(ref person);
+                            EditPerson(ref person, courses);
 
                             // re-add the updated person to the list
                             people[person.email] = person;
@@ -103,6 +106,10 @@ namespace PeopleApp
                         // list each person in the collection
                         // iterating through a Sorted List uses a special type called KeyValuePair
                         // each list entry has a Key and a Value
+                        //foreach (schedule in Courses.thisSchedule)
+                        //{
+
+                        //}
                         foreach (KeyValuePair<string, Person> thisEntry in people.sortedList)
                         {
                             // thisEntry.Key contains the email index
@@ -117,6 +124,7 @@ namespace PeopleApp
                                 // gpa only belongs to Student, so we need a Student reference variable to output that
                                 Student student = (Student)thisPerson;
                                 Console.WriteLine($"{student.gpa}");
+
                             }
 
                             if (thisPerson.GetType() == typeof(Teacher))
@@ -145,10 +153,17 @@ namespace PeopleApp
             }
         }
 
-        public static void EditPerson(ref Person thisPerson)
+        public static void EditPerson(ref Person thisPerson, Courses thisCourse)
         {
             // for each field, display the current value, if any
             // only replace the value if a new value was entered
+
+            Console.Write($"Course Code ({thisCourse}) => ");
+            string sCourseCode = Console.ReadLine();
+            if (sCourseCode.Length == 0)
+            {
+               
+            }
 
             Console.Write($"Email ({thisPerson.email}) => ");
             string sEmail = Console.ReadLine();
