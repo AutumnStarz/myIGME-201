@@ -8,12 +8,15 @@ namespace PetApp
 {
     internal class Program
     {
+        //create pets class
         public class Pets
         {
             public List<Pet> petList = new List<Pet>();
 
+            
             public Pet this[int nPetEl]
             {
+               
                 get
                 {
                     Pet returnVal;
@@ -53,26 +56,32 @@ namespace PetApp
                 }
             }
 
+            //add
             public Pet Add(Pet pet)
             {
                 petList.Add(pet);
+                return petList[0];
             }
-
+            //remove
             public Pet Remove(Pet pet)
             {
                 petList.Remove(pet);
+                return petList[0];
             }
-
+            //remove at a specific spot
             public int RemoveAt(int petEl)
             {
                 petList.RemoveAt(petEl);
+                return petList.Count;
             }
 
         }
+        //create pet class
         public abstract class Pet : Pets
         {
             private string name;
             public int age;
+
 
             public string Name
             {
@@ -91,6 +100,11 @@ namespace PetApp
             public abstract string Play();
             public abstract string GotoVet();
 
+            public Pet()
+            {
+
+            }
+
             public Pet(string name, int age)
             {
                 this.name = name;
@@ -100,57 +114,106 @@ namespace PetApp
         }
         public interface ICat
         {
-            void Eat();
-            void Play();
-            void Scratch();
-            void Purr();
+         
 
 
         }
 
         public interface IDog
         {
-            void Eat();
-            void Play();
-            void Bark();
-            void NeedWalk();
-            void GotoVet();
+       
         }
-
+        
+        //create cat class
         public class Cat : Pet, ICat
         {
             public override string Eat()
             {
-                return Eat();
+                return "Eat";
             }
 
             public override string Play()
             {
-                return Play();
+                return "Play";
             }
 
             public override string GotoVet()
             {
-                return GotoVet();
+                return "Going to vet";
             }
 
-            public void Purr()
+            public string Purr()
             {
-
+                return "purrrrrr";
             }
 
-            public void Scratch()
+            public string Scratch()
             {
-
+                return "scratch";
             }
         }
 
+        //create dog class
         public class Dog : Pet, IDog
         {
+            public string license;
 
+            public string Bark()
+            {
+                return "bark";
+            }
+            public string NeedWalk()
+            {
+                return "Walk";
+            }
+            public override string Eat()
+            {
+                return "eat";
+            }
+
+            public override string Play()
+            {
+                return "play";
+            }
+
+            public override string GotoVet()
+            {
+                return "going to vet";
+            }
         }
         static void Main(string[] args)
         {
+            //create pet variables
+            Pet thisPet = null;
+            Dog dog = null;
+            Cat cat = null;
+            IDog iDog = null;
+            ICat iCat = null;
+
+            Pets pets = new Pets();
+            Random rand = new Random();
+            if (rand.Next(1, 11) == 1)
+            {
+                if (rand.Next(0, 2) == 0)
+                {
+                    // add a dog
+                    thisPet.Add(dog);
+
+                }
+                else
+                {
+                    // else add a cat
+                    thisPet.Add(cat);
+
+                }
+            }
+            else
+            {
+                // choose a random pet from pets and choose a random activity for the pet to do
+            }
+
+
+
         }
     }
 }
