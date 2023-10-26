@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace UT2yUML
 {
+    //create interfaces
     public interface IDrawDigital
     {
         void Draw();
@@ -15,12 +16,15 @@ namespace UT2yUML
     {
         void Draw();
     }
+
+    //create abtract class with a virtual and void
     public abstract class Art
     {
         public abstract void GetSupplies();
         public virtual void DrawSomething() { }
     }
 
+    //create children that inherit from abstract and interfce
     public class DigitalArt : Art, IDrawDigital
     {
         public string device;
@@ -42,10 +46,16 @@ namespace UT2yUML
     {
         static void Main(string[] args)
         {
+            //create objects from the children classes
             TraditionalArt art = new TraditionalArt();
             DigitalArt digitalArt = new DigitalArt();
+
+            //call them with the method
+            MyMethod(art);
+            MyMethod(digitalArt);
         }
 
+        //method
         static void MyMethod(object obj)
         {
             if (obj is TraditionalArt traditional)
