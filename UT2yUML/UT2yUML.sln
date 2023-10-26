@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34018.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UT2yUML", "UT2yUML.csproj", "{8D98880E-F9F1-4ACE-BCD5-5C27F0F426EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D98880E-F9F1-4ACE-BCD5-5C27F0F426EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D98880E-F9F1-4ACE-BCD5-5C27F0F426EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D98880E-F9F1-4ACE-BCD5-5C27F0F426EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D98880E-F9F1-4ACE-BCD5-5C27F0F426EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A89561A-0187-4F4B-9109-22ECCBB28C93}
+	EndGlobalSection
+EndGlobal
