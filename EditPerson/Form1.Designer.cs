@@ -47,16 +47,16 @@
             this.cancelButton = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.genderGroupBox = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.himRadioButton = new System.Windows.Forms.RadioButton();
-            this.herRadioButton = new System.Windows.Forms.RadioButton();
             this.themRadioButton = new System.Windows.Forms.RadioButton();
+            this.herRadioButton = new System.Windows.Forms.RadioButton();
+            this.himRadioButton = new System.Windows.Forms.RadioButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.classGroupBox = new System.Windows.Forms.GroupBox();
-            this.froshRadioButton = new System.Windows.Forms.RadioButton();
-            this.sophRadioButton = new System.Windows.Forms.RadioButton();
-            this.juniorRadioButton = new System.Windows.Forms.RadioButton();
-            this.seniorRadioButton = new System.Windows.Forms.RadioButton();
             this.classOfLabel = new System.Windows.Forms.Label();
+            this.seniorRadioButton = new System.Windows.Forms.RadioButton();
+            this.juniorRadioButton = new System.Windows.Forms.RadioButton();
+            this.sophRadioButton = new System.Windows.Forms.RadioButton();
+            this.froshRadioButton = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.genderGroupBox.SuspendLayout();
             this.classGroupBox.SuspendLayout();
@@ -67,9 +67,10 @@
             this.typeLabel.BackColor = System.Drawing.Color.Transparent;
             this.typeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.typeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.typeLabel.Location = new System.Drawing.Point(9, 20);
+            this.typeLabel.Location = new System.Drawing.Point(14, 31);
+            this.typeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.typeLabel.Name = "typeLabel";
-            this.typeLabel.Size = new System.Drawing.Size(70, 13);
+            this.typeLabel.Size = new System.Drawing.Size(105, 20);
             this.typeLabel.TabIndex = 0;
             this.typeLabel.Text = "Person type:";
             // 
@@ -81,10 +82,11 @@
             this.typeComboBox.Items.AddRange(new object[] {
             "Student",
             "Teacher"});
-            this.typeComboBox.Location = new System.Drawing.Point(80, 18);
+            this.typeComboBox.Location = new System.Drawing.Point(120, 28);
+            this.typeComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.typeComboBox.MaxDropDownItems = 2;
             this.typeComboBox.Name = "typeComboBox";
-            this.typeComboBox.Size = new System.Drawing.Size(119, 21);
+            this.typeComboBox.Size = new System.Drawing.Size(176, 28);
             this.typeComboBox.TabIndex = 0;
             // 
             // nameLabel
@@ -92,18 +94,20 @@
             this.nameLabel.BackColor = System.Drawing.Color.Transparent;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.nameLabel.Location = new System.Drawing.Point(9, 55);
+            this.nameLabel.Location = new System.Drawing.Point(14, 85);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(70, 13);
+            this.nameLabel.Size = new System.Drawing.Size(105, 20);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "Name:";
             // 
             // nameText
             // 
             this.nameText.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.nameText.Location = new System.Drawing.Point(80, 53);
+            this.nameText.Location = new System.Drawing.Point(120, 82);
+            this.nameText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nameText.Name = "nameText";
-            this.nameText.Size = new System.Drawing.Size(207, 20);
+            this.nameText.Size = new System.Drawing.Size(308, 26);
             this.nameText.TabIndex = 1;
             // 
             // emailLabel
@@ -111,18 +115,20 @@
             this.emailLabel.BackColor = System.Drawing.Color.Transparent;
             this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.emailLabel.Location = new System.Drawing.Point(9, 92);
+            this.emailLabel.Location = new System.Drawing.Point(14, 142);
+            this.emailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(70, 13);
+            this.emailLabel.Size = new System.Drawing.Size(105, 20);
             this.emailLabel.TabIndex = 2;
             this.emailLabel.Text = "Email:";
             // 
             // emailText
             // 
             this.emailText.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.emailText.Location = new System.Drawing.Point(80, 89);
+            this.emailText.Location = new System.Drawing.Point(120, 137);
+            this.emailText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.emailText.Name = "emailText";
-            this.emailText.Size = new System.Drawing.Size(352, 20);
+            this.emailText.Size = new System.Drawing.Size(526, 26);
             this.emailText.TabIndex = 2;
             // 
             // ageLabel
@@ -130,18 +136,20 @@
             this.ageLabel.BackColor = System.Drawing.Color.Transparent;
             this.ageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ageLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ageLabel.Location = new System.Drawing.Point(9, 131);
+            this.ageLabel.Location = new System.Drawing.Point(14, 202);
+            this.ageLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ageLabel.Name = "ageLabel";
-            this.ageLabel.Size = new System.Drawing.Size(70, 13);
+            this.ageLabel.Size = new System.Drawing.Size(105, 20);
             this.ageLabel.TabIndex = 3;
             this.ageLabel.Text = "Age:";
             // 
             // ageText
             // 
             this.ageText.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ageText.Location = new System.Drawing.Point(80, 128);
+            this.ageText.Location = new System.Drawing.Point(120, 197);
+            this.ageText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ageText.Name = "ageText";
-            this.ageText.Size = new System.Drawing.Size(60, 20);
+            this.ageText.Size = new System.Drawing.Size(88, 26);
             this.ageText.TabIndex = 3;
             // 
             // licLabel
@@ -149,35 +157,39 @@
             this.licLabel.BackColor = System.Drawing.Color.Transparent;
             this.licLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.licLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.licLabel.Location = new System.Drawing.Point(9, 171);
+            this.licLabel.Location = new System.Drawing.Point(14, 263);
+            this.licLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.licLabel.Name = "licLabel";
-            this.licLabel.Size = new System.Drawing.Size(70, 13);
+            this.licLabel.Size = new System.Drawing.Size(105, 20);
             this.licLabel.TabIndex = 4;
             this.licLabel.Text = "License Id:";
             // 
             // licText
             // 
             this.licText.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.licText.Location = new System.Drawing.Point(80, 169);
+            this.licText.Location = new System.Drawing.Point(120, 260);
+            this.licText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.licText.Name = "licText";
-            this.licText.Size = new System.Drawing.Size(119, 20);
+            this.licText.Size = new System.Drawing.Size(176, 26);
             this.licText.TabIndex = 4;
             // 
             // specialtyLabel
             // 
             this.specialtyLabel.BackColor = System.Drawing.Color.Transparent;
-            this.specialtyLabel.Location = new System.Drawing.Point(9, 210);
+            this.specialtyLabel.Location = new System.Drawing.Point(14, 323);
+            this.specialtyLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.specialtyLabel.Name = "specialtyLabel";
-            this.specialtyLabel.Size = new System.Drawing.Size(70, 13);
+            this.specialtyLabel.Size = new System.Drawing.Size(105, 20);
             this.specialtyLabel.TabIndex = 5;
             this.specialtyLabel.Text = "Specialty:";
             // 
             // specText
             // 
             this.specText.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.specText.Location = new System.Drawing.Point(80, 207);
+            this.specText.Location = new System.Drawing.Point(120, 318);
+            this.specText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.specText.Name = "specText";
-            this.specText.Size = new System.Drawing.Size(352, 20);
+            this.specText.Size = new System.Drawing.Size(526, 26);
             this.specText.TabIndex = 5;
             // 
             // gpaLabel
@@ -185,25 +197,28 @@
             this.gpaLabel.BackColor = System.Drawing.Color.Transparent;
             this.gpaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpaLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gpaLabel.Location = new System.Drawing.Point(9, 210);
+            this.gpaLabel.Location = new System.Drawing.Point(14, 323);
+            this.gpaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gpaLabel.Name = "gpaLabel";
-            this.gpaLabel.Size = new System.Drawing.Size(60, 13);
+            this.gpaLabel.Size = new System.Drawing.Size(90, 20);
             this.gpaLabel.TabIndex = 6;
             this.gpaLabel.Text = "GPA:";
             // 
             // gpaText
             // 
             this.gpaText.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gpaText.Location = new System.Drawing.Point(80, 207);
+            this.gpaText.Location = new System.Drawing.Point(120, 318);
+            this.gpaText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gpaText.Name = "gpaText";
-            this.gpaText.Size = new System.Drawing.Size(60, 20);
+            this.gpaText.Size = new System.Drawing.Size(88, 26);
             this.gpaText.TabIndex = 5;
             // 
             // okButton
             // 
-            this.okButton.Location = new System.Drawing.Point(281, 243);
+            this.okButton.Location = new System.Drawing.Point(422, 374);
+            this.okButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(56, 24);
+            this.okButton.Size = new System.Drawing.Size(84, 37);
             this.okButton.TabIndex = 6;
             this.okButton.Text = "OK";
             this.okButton.UseVisualStyleBackColor = true;
@@ -212,9 +227,10 @@
             // 
             this.cancelButton.CausesValidation = false;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(376, 243);
+            this.cancelButton.Location = new System.Drawing.Point(564, 374);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(56, 24);
+            this.cancelButton.Size = new System.Drawing.Size(84, 37);
             this.cancelButton.TabIndex = 7;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -228,45 +244,52 @@
             this.genderGroupBox.Controls.Add(this.themRadioButton);
             this.genderGroupBox.Controls.Add(this.herRadioButton);
             this.genderGroupBox.Controls.Add(this.himRadioButton);
-            this.genderGroupBox.Location = new System.Drawing.Point(448, 18);
+            this.genderGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderGroupBox.Location = new System.Drawing.Point(672, 28);
+            this.genderGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.genderGroupBox.Name = "genderGroupBox";
-            this.genderGroupBox.Size = new System.Drawing.Size(98, 102);
+            this.genderGroupBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.genderGroupBox.Size = new System.Drawing.Size(147, 157);
             this.genderGroupBox.TabIndex = 6;
             this.genderGroupBox.TabStop = false;
             this.genderGroupBox.Text = "Gender";
+            this.genderGroupBox.Enter += new System.EventHandler(this.genderGroupBox_Enter);
             // 
-            // himRadioButton
+            // themRadioButton
             // 
-            this.himRadioButton.AutoSize = true;
-            this.himRadioButton.Location = new System.Drawing.Point(3, 16);
-            this.himRadioButton.Name = "himRadioButton";
-            this.himRadioButton.Size = new System.Drawing.Size(43, 17);
-            this.himRadioButton.TabIndex = 0;
-            this.himRadioButton.TabStop = true;
-            this.himRadioButton.Text = "Him";
-            this.himRadioButton.UseVisualStyleBackColor = true;
+            this.themRadioButton.AutoSize = true;
+            this.themRadioButton.Location = new System.Drawing.Point(4, 95);
+            this.themRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.themRadioButton.Name = "themRadioButton";
+            this.themRadioButton.Size = new System.Drawing.Size(78, 24);
+            this.themRadioButton.TabIndex = 2;
+            this.themRadioButton.TabStop = true;
+            this.themRadioButton.Text = "Them";
+            this.themRadioButton.UseVisualStyleBackColor = true;
             // 
             // herRadioButton
             // 
             this.herRadioButton.AutoSize = true;
-            this.herRadioButton.Location = new System.Drawing.Point(3, 39);
+            this.herRadioButton.Location = new System.Drawing.Point(4, 60);
+            this.herRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.herRadioButton.Name = "herRadioButton";
-            this.herRadioButton.Size = new System.Drawing.Size(42, 17);
+            this.herRadioButton.Size = new System.Drawing.Size(63, 24);
             this.herRadioButton.TabIndex = 1;
             this.herRadioButton.TabStop = true;
             this.herRadioButton.Text = "Her";
             this.herRadioButton.UseVisualStyleBackColor = true;
             // 
-            // themRadioButton
+            // himRadioButton
             // 
-            this.themRadioButton.AutoSize = true;
-            this.themRadioButton.Location = new System.Drawing.Point(3, 62);
-            this.themRadioButton.Name = "themRadioButton";
-            this.themRadioButton.Size = new System.Drawing.Size(52, 17);
-            this.themRadioButton.TabIndex = 2;
-            this.themRadioButton.TabStop = true;
-            this.themRadioButton.Text = "Them";
-            this.themRadioButton.UseVisualStyleBackColor = true;
+            this.himRadioButton.AutoSize = true;
+            this.himRadioButton.Location = new System.Drawing.Point(4, 25);
+            this.himRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.himRadioButton.Name = "himRadioButton";
+            this.himRadioButton.Size = new System.Drawing.Size(65, 24);
+            this.himRadioButton.TabIndex = 0;
+            this.himRadioButton.TabStop = true;
+            this.himRadioButton.Text = "Him";
+            this.himRadioButton.UseVisualStyleBackColor = true;
             // 
             // classGroupBox
             // 
@@ -275,75 +298,83 @@
             this.classGroupBox.Controls.Add(this.juniorRadioButton);
             this.classGroupBox.Controls.Add(this.sophRadioButton);
             this.classGroupBox.Controls.Add(this.froshRadioButton);
-            this.classGroupBox.Location = new System.Drawing.Point(552, 20);
+            this.classGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classGroupBox.Location = new System.Drawing.Point(828, 31);
+            this.classGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.classGroupBox.Name = "classGroupBox";
-            this.classGroupBox.Size = new System.Drawing.Size(116, 124);
+            this.classGroupBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.classGroupBox.Size = new System.Drawing.Size(174, 191);
             this.classGroupBox.TabIndex = 7;
             this.classGroupBox.TabStop = false;
             this.classGroupBox.Text = "Class";
             // 
-            // froshRadioButton
+            // classOfLabel
             // 
-            this.froshRadioButton.AutoSize = true;
-            this.froshRadioButton.Location = new System.Drawing.Point(3, 16);
-            this.froshRadioButton.Name = "froshRadioButton";
-            this.froshRadioButton.Size = new System.Drawing.Size(71, 17);
-            this.froshRadioButton.TabIndex = 0;
-            this.froshRadioButton.TabStop = true;
-            this.froshRadioButton.Text = "Freshman";
-            this.froshRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // sophRadioButton
-            // 
-            this.sophRadioButton.AutoSize = true;
-            this.sophRadioButton.Location = new System.Drawing.Point(3, 39);
-            this.sophRadioButton.Name = "sophRadioButton";
-            this.sophRadioButton.Size = new System.Drawing.Size(79, 17);
-            this.sophRadioButton.TabIndex = 1;
-            this.sophRadioButton.TabStop = true;
-            this.sophRadioButton.Text = "Sophomore";
-            this.sophRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // juniorRadioButton
-            // 
-            this.juniorRadioButton.AutoSize = true;
-            this.juniorRadioButton.Location = new System.Drawing.Point(3, 62);
-            this.juniorRadioButton.Name = "juniorRadioButton";
-            this.juniorRadioButton.Size = new System.Drawing.Size(53, 17);
-            this.juniorRadioButton.TabIndex = 2;
-            this.juniorRadioButton.TabStop = true;
-            this.juniorRadioButton.Text = "Junior";
-            this.juniorRadioButton.UseVisualStyleBackColor = true;
+            this.classOfLabel.AutoSize = true;
+            this.classOfLabel.Location = new System.Drawing.Point(32, 162);
+            this.classOfLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.classOfLabel.Name = "classOfLabel";
+            this.classOfLabel.Size = new System.Drawing.Size(119, 20);
+            this.classOfLabel.TabIndex = 4;
+            this.classOfLabel.Text = "Class of 2023";
+            this.classOfLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // seniorRadioButton
             // 
             this.seniorRadioButton.AutoSize = true;
-            this.seniorRadioButton.Location = new System.Drawing.Point(3, 85);
+            this.seniorRadioButton.Location = new System.Drawing.Point(4, 131);
+            this.seniorRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.seniorRadioButton.Name = "seniorRadioButton";
-            this.seniorRadioButton.Size = new System.Drawing.Size(55, 17);
+            this.seniorRadioButton.Size = new System.Drawing.Size(86, 24);
             this.seniorRadioButton.TabIndex = 3;
             this.seniorRadioButton.TabStop = true;
             this.seniorRadioButton.Text = "Senior";
             this.seniorRadioButton.UseVisualStyleBackColor = true;
             // 
-            // classOfLabel
+            // juniorRadioButton
             // 
-            this.classOfLabel.AutoSize = true;
-            this.classOfLabel.Location = new System.Drawing.Point(21, 105);
-            this.classOfLabel.Name = "classOfLabel";
-            this.classOfLabel.Size = new System.Drawing.Size(71, 13);
-            this.classOfLabel.TabIndex = 4;
-            this.classOfLabel.Text = "Class of 2023";
-            this.classOfLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.juniorRadioButton.AutoSize = true;
+            this.juniorRadioButton.Location = new System.Drawing.Point(4, 95);
+            this.juniorRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.juniorRadioButton.Name = "juniorRadioButton";
+            this.juniorRadioButton.Size = new System.Drawing.Size(83, 24);
+            this.juniorRadioButton.TabIndex = 2;
+            this.juniorRadioButton.TabStop = true;
+            this.juniorRadioButton.Text = "Junior";
+            this.juniorRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // sophRadioButton
+            // 
+            this.sophRadioButton.AutoSize = true;
+            this.sophRadioButton.Location = new System.Drawing.Point(4, 60);
+            this.sophRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sophRadioButton.Name = "sophRadioButton";
+            this.sophRadioButton.Size = new System.Drawing.Size(126, 24);
+            this.sophRadioButton.TabIndex = 1;
+            this.sophRadioButton.TabStop = true;
+            this.sophRadioButton.Text = "Sophomore";
+            this.sophRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // froshRadioButton
+            // 
+            this.froshRadioButton.AutoSize = true;
+            this.froshRadioButton.Location = new System.Drawing.Point(4, 25);
+            this.froshRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.froshRadioButton.Name = "froshRadioButton";
+            this.froshRadioButton.Size = new System.Drawing.Size(114, 24);
+            this.froshRadioButton.TabIndex = 0;
+            this.froshRadioButton.TabStop = true;
+            this.froshRadioButton.Text = "Freshman";
+            this.froshRadioButton.UseVisualStyleBackColor = true;
             // 
             // PersonEditForm
             // 
             this.AcceptButton = this.okButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(680, 276);
+            this.ClientSize = new System.Drawing.Size(1011, 398);
             this.Controls.Add(this.classGroupBox);
             this.Controls.Add(this.genderGroupBox);
             this.Controls.Add(this.cancelButton);
@@ -363,10 +394,11 @@
             this.Controls.Add(this.typeLabel);
             this.Controls.Add(this.gpaLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 319);
+            this.MaximumSize = new System.Drawing.Size(1037, 458);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(700, 319);
+            this.MinimumSize = new System.Drawing.Size(1037, 458);
             this.Name = "PersonEditForm";
             this.Text = "Edit Person";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();

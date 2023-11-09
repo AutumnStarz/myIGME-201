@@ -15,15 +15,16 @@ namespace EditPerson
     public partial class PersonEditForm : Form
     {
         Person formPerson;
-        
+
+ 
         public PersonEditForm(Person person, Form parentForm)
         {
             InitializeComponent();
 
-            BackColor = Color.LightSkyBlue;
-            ForeColor = Color.DarkBlue;
+            BackColor = Color.MintCream;
+            ForeColor = Color.RosyBrown;
             
-
+                 
             foreach (Control control in this.Controls)
             {
                 control.Tag = false;
@@ -475,6 +476,11 @@ namespace EditPerson
             // note that these must come at the end since they clear and release the form data
             this.Close();
             this.Dispose();
+        }
+
+        private void genderGroupBox_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
