@@ -53,6 +53,7 @@ namespace Dyscord
             this.exitButton.Click += new EventHandler(ExitButton__Click);
 
             this.webBrowser1.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(WebBrowser1__DocumentCompleted);
+            
 
         }
         private void LoginButton__Click(object sender, EventArgs e)
@@ -164,6 +165,11 @@ namespace Dyscord
             }
         }
 
+        private void Form__FormClosing(object sender, FormClosedEventArgs e)
+        {
+            listener.Close();
+            thread.Abort();
+        }
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
 
