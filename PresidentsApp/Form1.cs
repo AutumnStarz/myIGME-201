@@ -21,6 +21,7 @@ namespace PresidentsApp
             this.ControlBox = false;
 
             //start the timer
+            timer = new Timer();
             timer.Enabled = true;
             timer.Start();
             timer.Interval = 1000;

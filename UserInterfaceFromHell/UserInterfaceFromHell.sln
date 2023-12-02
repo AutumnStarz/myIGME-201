@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterfaceFromHell", "UserInterfaceFromHell.csproj", "{328880C5-E57D-47B1-936E-3FE1A7A79C3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{328880C5-E57D-47B1-936E-3FE1A7A79C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{328880C5-E57D-47B1-936E-3FE1A7A79C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{328880C5-E57D-47B1-936E-3FE1A7A79C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{328880C5-E57D-47B1-936E-3FE1A7A79C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56EB0DA7-1C0A-428B-AA69-B02FB1288FCB}
+	EndGlobalSection
+EndGlobal
