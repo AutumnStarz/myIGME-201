@@ -16,8 +16,10 @@ namespace UserInterfaceFromHell
         {
             InitializeComponent();
 
+            //get rid of the controls
             this.ControlBox = false;
 
+            //hide the stuff
             this.BackColor = Color.White;
             this.loginButton2.Hide();
             this.pass2.Hide();
@@ -35,6 +37,7 @@ namespace UserInterfaceFromHell
 
             this.pickLabel.Hide();
 
+            //set up event handlers
             this.loginButton.Click += new EventHandler(this.LoginButton__Click);
             this.loginButton2.Click += new EventHandler(this.LoginButton2__Click);
             this.loginButton3.Click += new EventHandler(this.LoginButton3__Click);

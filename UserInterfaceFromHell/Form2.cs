@@ -17,9 +17,11 @@ namespace UserInterfaceFromHell
             InitializeComponent();
             this.ControlBox = false;
 
+            //set up event handlers
             this.logoutButton.Click += new EventHandler(this.LogoutButton__Click);
         }
 
+        //open form3
         private void LogoutButton__Click(object sender, EventArgs e)
         {
             Form3 form3 = new Form3();

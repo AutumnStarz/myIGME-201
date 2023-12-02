@@ -19,9 +19,11 @@ namespace UserInterfaceFromHell
 
             this.ControlBox = false;
 
+            //start the thread
             Thread colorChangeThread = new Thread(ChangeFormColor);
             colorChangeThread.Start();
 
+            //set up event handlers
             this.logoutButton.Click += new EventHandler(this.LogoutButton__Click);
         }
 
