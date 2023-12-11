@@ -113,7 +113,7 @@ namespace BTree
 
             BTree node = null;
             BTree root = null;
-            
+
             node = new BTree("M", null);
             root = node;
 
@@ -146,7 +146,7 @@ namespace BTree
             node = new BTree("Y", root);
             node = new BTree("Z", root);
 
-            this.richTextBox.Text += "\n";            
+            this.richTextBox.Text += "\n";
             BTree.TraverseAscending(root);
 
             this.richTextBox.Text += "\n";
@@ -167,6 +167,11 @@ namespace BTree
             this.richTextBox.Clear();
 
             // Your code here
+            for (int i = 0; i < 30; i++)
+            {
+                int randomNumber = random.Next(1, 52);
+                node = new BTree(randomNumber, root);
+            }
 
 
             this.richTextBox.Text += "\n";
@@ -191,6 +196,13 @@ namespace BTree
 
 
             // Your code here
+
+            int[] data = { 10, 24, 30, 40, 45, 48, 50 };
+
+            foreach (int dataPoint in data)
+            {
+                node = new BTree(dataPoint, root, false);
+            }
 
 
             for (int i = 0; i < 30; ++i)
@@ -217,7 +229,12 @@ namespace BTree
             this.richTextBox.Clear();
 
             // Your code here
+            string[] randomStrings = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o" };
 
+            foreach (string str in randomStrings)
+            {
+                node = new BTree(str.ToUpper(), root);
+            }
 
             this.richTextBox.Text += "\n";
 
@@ -238,7 +255,12 @@ namespace BTree
             BTree root = null;
 
             // Your code here
+            string[] randomStrings = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o" };
 
+            foreach (string str in randomStrings)
+            {
+                node = new BTree(str.ToUpper(), root);
+            }
 
             this.richTextBox.Text += "\n";
             BTree.TraverseAscending(root);
@@ -266,8 +288,32 @@ namespace BTree
             BTree nodeToDelete = null;
             BTree root = null;
 
-            // Your code here
 
+            // Your code here
+            string[] randomStrings = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+
+            foreach (string str in randomStrings)
+            {
+                node = new BTree(str.ToUpper(), root);
+            }
+
+            //c
+            nodeToDelete = new BTree("C", null);
+            BTree.DeleteNode(nodeToDelete, root);
+            this.richTextBox.Text += "\n";
+            BTree.TraverseAscending(root);
+
+            //i
+            nodeToDelete = new BTree("I", null);
+            BTree.DeleteNode(nodeToDelete, root);
+            this.richTextBox.Text += "\n";
+            BTree.TraverseAscending(root);
+
+            //a
+            nodeToDelete = new BTree("A", null);
+            BTree.DeleteNode(nodeToDelete, root);
+            this.richTextBox.Text += "\n";
+            BTree.TraverseAscending(root);
 
             this.richTextBox.Text += "\n";
             BTree.TraverseAscending(root);
@@ -293,8 +339,31 @@ namespace BTree
             // the Person class is defined below
             Person person = null;
 
-            // Your code here
+            // Your code here 
 
+            //array of 15 family members
+            Person[] people = new Person[] {
+                 new Person("Autumn", 20),
+                 new Person("Alex", 22),
+                 new Person("Elizabeth", 49),
+                 new Person("Eric", 50),
+                 new Person("Sarah", 28),
+                 new Person("Benjamin", 40),
+                 new Person("Hannah", 33),
+                 new Person("Rodney", 45),
+                 new Person("Emma", 27),
+                 new Person("Jack", 38),
+                 new Person("Sandy", 32),
+                 new Person("Sammy", 50),
+                 new Person("Mia", 29),
+                 new Person("Rachel", 42),
+                 new Person("Olivia", 25)
+               };
+
+            foreach (Person p in people)
+            {
+                node = new BTree(p, root);
+            }
 
             this.richTextBox.Text += "\n";
             BTree.TraverseAscending(root);
@@ -317,6 +386,29 @@ namespace BTree
             Person person = null;
 
             // Your code here
+            Person[] seedPeople = new Person[]{
+            new Person("Autumn", 20),
+            new Person("Alex", 22),
+            new Person("Elizabeth", 49),
+            new Person("Eric", 50),
+            new Person("Sarah", 28),
+            new Person("Benjamin", 40),
+            new Person("Hannah", 33),
+            new Person("Rodney", 45),
+            new Person("Emma", 27),
+            new Person("Jack", 38),
+            new Person("Sandy", 32),
+            new Person("Sammy", 50),
+            new Person("Mia", 29),
+            new Person("Rachel", 42),
+            new Person("Olivia", 3)
+            };
+
+            foreach (Person seedPerson in seedPeople)
+            {
+                node = new BTree(seedPerson, root, false);
+            }
+
 
 
             this.richTextBox.Text += "\n";
