@@ -13,13 +13,13 @@ namespace FE1
         {
             //create the stack item
             public List<int> Stack = new List<int>();
-            public MyStack() 
+            public MyStack()
             {
 
             }
             //push
-            public void Push(int x) 
-            { 
+            public void Push(int x)
+            {
                 Stack.Add(x);
             }
             //pop
@@ -31,12 +31,12 @@ namespace FE1
                 return popped;
             }
             //peek
-            public int Peek() 
+            public int Peek()
             {
                 return Stack[Stack.Count - 1];
             }
 
-        //queue class #2
+            //queue class #2
             public class MyQueue
             {
                 //the queue
@@ -60,9 +60,10 @@ namespace FE1
                     return Queue[0];
                 }
             }
-        static void Main(string[] args)
-        {
+            static void Main(string[] args)
+            {
 
+            }
         }
     }
 }
