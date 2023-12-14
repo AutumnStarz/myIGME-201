@@ -11,6 +11,7 @@ namespace FE3
     {
         static void Main(string[] args)
         {
+            //represent the diagraph as matrix and list #3
             //vertices of digraph
             string[] vertices = { "red", "blue", "lightblue", "grey", "orange", "purple", "yellow", "green" };
 
@@ -42,16 +43,34 @@ namespace FE3
             adjacencyL.AddEdge(4, 5, 1); //orange -> purple
             adjacencyL.AddEdge(5, 6, 1); //purple -> yellow
 
+            DepthFirstSearch(adjacencyL, 0, new bool[vertices.Length]);
         }
 
-       class AdjacencyList
+        //depth first seach #5
+        static void DepthFirstSearch(AdjacencyList graph, int vertex, bool[] visited)
+        {
+            visited[vertex] = true; //boo; to mark when a vertex has been visited
+            Console.WriteLine(graph.GetColor(vertex)); //output the color of the current vertex
+
+            foreach (Tuple<int, int> neighbor in graph.GetNeighbors(vertex))
+            {
+                if (!visited[neighbor.Item1]) //chekck if a vertex has been visted
+                {
+                    DepthFirstSearch(graph, neighbor.Item1, visited); //recursively call for unvisited neighbors
+                }
+            }
+        }
+
+        class AdjacencyList
         {
             LinkedList<Tuple<int, int>>[] adjacencyList;
+            string[] colors;
 
             //make an empty adj list
             public AdjacencyList(int vertices)
             {
                 adjacencyList = new LinkedList<Tuple<int, int>>[vertices];
+                colors = new string[vertices];
 
                 for (int i = 0; i < adjacencyList.Length; i++)
                 {
@@ -63,6 +82,18 @@ namespace FE3
             public void AddEdge(int start, int end, int weight)
             {
                 adjacencyList[start].AddLast(new Tuple<int, int>(end, weight));
+            }
+
+            //get the neighbors of each vertex
+            public LinkedList<Tuple<int, int>> GetNeighbors(int vertex)
+            {
+                return adjacencyList[vertex];
+            }
+
+            //get the colors at each vertex
+            public string GetColor(int vertex)
+            {
+                return colors[vertex];
             }
         }
     }
