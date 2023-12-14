@@ -43,7 +43,9 @@ namespace FE3
             adjacencyL.AddEdge(4, 5, 1); //orange -> purple
             adjacencyL.AddEdge(5, 6, 1); //purple -> yellow
 
+
             DepthFirstSearch(adjacencyL, 0, new bool[vertices.Length]);
+
 
         }
 
@@ -62,10 +64,90 @@ namespace FE3
             }
         }
 
+        //Dijkstra shortest path #6
+        static void DijkstraShortestPath(AdjacencyList graph, int start, int end)
+        {
+            int[] distances = new int[graph.Vertices];
+            bool[] visited = new bool[graph.Vertices];
+            int[] previous = new int[graph.Vertices];
+
+            for (int i = 0; i < graph.Vertices; i++)
+            {
+                distances[i] = int.MaxValue;
+                previous[i] = -1;
+            }
+            distances[start] = 0;
+
+            //find the shortest path
+            for (int i = 0; i < graph.Vertices - 1; i++)
+            {
+                int u = MinDistance(distances, visited);
+                visited[u] = true;
+
+                foreach (Tuple<int, int> neighbor in graph.GetNeighbors(u))
+                {
+                    int v = neighbor.Item1;
+                    int weight = neighbor.Item2;
+
+                    if (!visited[v] && distances[u] != int.MaxValue && distances[u] + weight < distances[v])
+                    {
+                        distances[v] = distances[u] + weight;
+                        previous[v] = u;
+                    }
+                }
+            }
+
+            //output the shortest path
+            FinalShortestPath(graph, distances, previous, start, end);
+        }
+
+
+        //fin the vertex with the minimum distance 
+        static int MinDistance(int[] distances, bool[] visited)
+        {
+            int min = int.MaxValue;
+            int minIndex = -1;
+
+            for (int v = 0; v < distances.Length; v++)
+            {
+                if (!visited[v] && distances[v] <= min)
+                {
+                    min = distances[v];
+                    minIndex = v;
+                }
+            }
+
+            return minIndex;
+        }
+
+        static void FinalShortestPath(AdjacencyList graph, int[] distances, int[] previous, int start, int end)
+        {
+            //output the shortest path
+            Console.WriteLine($"Here is the shortest path from {graph.GetColor(start)} to {graph.GetColor(end)} using Dijikstra's shortest path algorimn:");
+            List<int> path = new List<int>();
+            int current = end;
+
+            while (current != -1)
+            {
+                path.Add(current);
+                current = previous[current];
+            }
+
+            path.Reverse();
+
+            foreach (int vertex in path)
+            {
+                Console.Write($"{graph.GetColor(vertex)} -> ");
+            }
+
+            Console.WriteLine($"Total Distance: {distances[end]}");
+        }
         class AdjacencyList
         {
             LinkedList<Tuple<int, int>>[] adjacencyList;
             string[] colors;
+
+            public int Vertices { get; }
 
             //make an empty adj list
             public AdjacencyList(int vertices)
