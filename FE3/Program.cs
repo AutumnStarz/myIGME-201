@@ -44,6 +44,7 @@ namespace FE3
             adjacencyL.AddEdge(5, 6, 1); //purple -> yellow
 
             DepthFirstSearch(adjacencyL, 0, new bool[vertices.Length]);
+
         }
 
         //depth first seach #5
@@ -75,6 +76,7 @@ namespace FE3
                 for (int i = 0; i < adjacencyList.Length; i++)
                 {
                     adjacencyList[i] = new LinkedList<Tuple<int, int>>();
+                    colors[i] = "Color" + i.ToString();
                 }
             }
 
