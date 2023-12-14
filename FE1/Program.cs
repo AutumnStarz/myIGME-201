@@ -8,7 +8,7 @@ namespace FE1
 {
     internal class Program
     {
-        //stack class
+        //stack class #1 (queue class below)
         public class MyStack
         {
             //create the stack item
@@ -34,6 +34,31 @@ namespace FE1
             public int Peek() 
             {
                 return Stack[Stack.Count - 1];
+            }
+
+        //queue class #2
+            public class MyQueue
+            {
+                //the queue
+                private List<int> Queue = new List<int>();
+
+                //enqueue
+                public void Enqueue(int obj)
+                {
+                    Queue.Add(obj);
+                }
+                //dequeue
+                public int Dequeue()
+                {
+                    int dequeued = Queue[0];
+                    Queue.RemoveAt(0);
+                    return dequeued;
+                }
+                //peek
+                public int Peek()
+                {
+                    return Queue[0];
+                }
             }
         static void Main(string[] args)
         {
